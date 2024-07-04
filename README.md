@@ -1,3 +1,5 @@
+Status: Complete
+
 1. **Bookstore Application**:
    - Build a simple Rails application called "Bookstore."
    - The application should allow users to view a list of books.
