@@ -1,7 +1,8 @@
-<h1>Book List</h1>
-
-<ol>
+<ol class="book-list">
     <% @books.each do |book| %>
-        <li><%= "(#{book.author}) #{book.title}" %></li>
+        <li class="book-item">
+            <span class="book-author">(<%= book.author %>)</span>
+            <span class="book-title"><%= book.title %></span>
+        </li>
     <% end %>
 </ol>
