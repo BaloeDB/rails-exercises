@@ -1,17 +1,19 @@
-<%= form_with url: root_url, method: :get do |form| %>
-  <%= form.label :query, "Search for:" %>
-  <%= form.text_field :query %>
-  <%= form.submit "Search" %>
-<% end %>
+<div class="search-container">
+    <%= form_with url: root_url, method: :get do |form| %>
+    <%= form.label :query, "Search for:", class: "search-label" %>
+    <%= form.text_field :query, class: "search-input" %>
+    <%= form.submit "Search", class: "search-button" %>
+    <% end %>
+</div>
 
 <% if @query %>
-    <p>Searched for "<%= @query %>"...</p>
-    <hr>
-    <p><%= @count %> Results:</p>
-    <ol>
-        <% @results.each do |result| %>
-            <li><%= result %></li>
-        <% end %>
-    </ol>
+    <div class="result-container">
+        <p class="searched-query">Searched for "<%= @query %>", <%= @count %> Results:</p>
+        <ol class="result-list">
+            <% @results.each do |result| %>
+                <li class="result-item"><%= result %></li>
+            <% end %>
+        </ol>
+    </div>
 <% end %>
 
