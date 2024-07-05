@@ -1,0 +1,17 @@
+<%= form_with url: root_url, method: :get do |form| %>
+  <%= form.label :query, "Search for:" %>
+  <%= form.text_field :query %>
+  <%= form.submit "Search" %>
+<% end %>
+
+<% if @query %>
+    <p>Searched for "<%= @query %>"...</p>
+    <hr>
+    <p><%= @count %> Results:</p>
+    <ol>
+        <% @results.each do |result| %>
+            <li><%= result %></li>
+        <% end %>
+    </ol>
+<% end %>
+
