@@ -3,6 +3,7 @@ body {
     min-width: 300px;
     width: 60%;
     background-color: #ddd;
+    padding-top: 2em;
 }
 
 main, footer, header {
@@ -100,7 +101,7 @@ h1 {
     font-size: 24px;
     font-weight: bold;
     color: #333;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 .button {
@@ -146,6 +147,22 @@ h1 {
     font-weight: bold;
     border: none;
     background: none;
+}
+
+.notice {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    text-align: center;
+    color: #fff;
+    font-size: large;
+    font-weight: bold;
+    background-color: #cc5ffb;
+    margin-bottom: 0;
+}
+
+.notice:hover {
+    background-color: #9f4dc3;
 }
   
   

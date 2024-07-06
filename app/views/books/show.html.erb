@@ -1,16 +1,21 @@
 <p style="color: green"><%= notice %></p>
 <h1>View Book</h1>
-<div class="button green">
-  <%= link_to "Edit this book", edit_book_path(@book) %>
-</div>
-<div class="button red">
-    <%= button_to "Destroy this book", @book, method: :delete %>
-</div>
 <div class="button gray">
     <%= link_to "Back to books", books_path %>
 </div>
 
-
 <br>
 
 <%= render @book %>
+
+<br>
+
+<div class="button green">
+  <%= link_to "Edit this book", edit_book_path(@book) %>
+</div>
+<div class="button red">
+  <%= link_to "Delete this book", book_path(@book), data: {
+      turbo_method: :delete,
+      turbo_confirm: "Are you sure?"
+  } %>
+</div>
